@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}" />
+
+
+<div class="box-primaria">
+    <div class="banner-box-primaria">
+        <a href="{{ url_for('views.post', post_id=posts[posts_size-1].id) }}">
+            <img class="image-big" src="{{ url_for('static', filename=posts[posts_size-1].banner) }}">
+        </a>
+    </div>
+
+    <div class="text-box-primaria">
+        <ul>
+            <li>
+                <a href="{{ url_for('views.%s' % (posts[posts_size-1].category)) }}">
+                    <h2 class="category category-box-primaria">{{ posts[posts_size-1].category.capitalize() }}</h2>
+                </a>
+            </li>
+
+            <li class="title-li">
+                <a href="{{ url_for('views.post', post_id=posts[posts_size-1].id) }}">
+                    <h2 class="title title-box-primaria">{{ posts[posts_size-1].title }}</h2>
+                </a>
+            </li>
+
+            <li>
+                <p class="desc desc-primaria"> Um filme de Robert Eagers com Robert Pattinson, Willem Defoe. Início do
+                    século XX. Thomas Wake (Willem Defoe), responsável pelo farol de uma ilha isolada...</p>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+{% for podcast in podcasts[:podcasts_size-3:-1] %}
+<div class="box-secundaria">
+    <div class="box-secundaria-post1">
+        <div class="box-secundaria-post1-img">
+            <a href="{{ url_for('views.home') }}">
+                <img class="img-medium" src="{{ url_for('static', filename=podcast.banner) }}">
+            </a>
+        </div>
+
+        <div class="text-box-secundaria-post1">
+            <ul>
+                <li>
+                    <a href="{{ url_for('views.criticast') }}">
+                        <h2 class="category category-box-secundaria-post1">CritiCast</h2>
+                    </a>
+                </li>
+
+                <li class="title-li">
+                    <a href="{{ url_for('views.home') }}">
+                        <h2 class="title title-box-secundaria-post1">{{ podcast.title }}</h2>
+                    </a>
+                </li>
+
+                <li>
+                    <ul class="info info-box-secundaria-post1">
+                        <li>
+                            <p>{{ podcast.duration }}</p>
+                        </li>
+
+                        <li>
+                            <p>{{ podcast.date_posted.strftime('%d/%m/%Y') }}</p>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+<header class="header-news">
+    <h3 class="category header-news-title">Notícias</h3>
+    <hr class="line-news">
+
+</header>
+
+{% for post in posts[posts_size-2::-1] %}
+
+<div class="box-news">
+    <div class="box-news-banner">
+        <a href="{{ url_for('views.post', post_id=post.id) }}">
+            <img class="img-small" src="{{ url_for('static', filename=post.banner) }}">
+        </a>
+    </div>
+
+    <div class="text-box-news">
+        <ul>
+            <li>
+                <a href="{{ url_for('views.%s' % (post.category)) }}">
+                    <h2 class="category category-box-news">{{ post.category.capitalize() }}</h2>
+                </a>
+            </li>
+
+            <li class="title-li">
+                <a href="{{ url_for('views.post', post_id=post.id) }}">
+                    <h2 class="title title-box-news">{{ post.title }}</h2>
+                </a>
+            </li>
+
+            <li>
+                <p class="desc date_news_post">{{ post.date_posted.strftime('%d/%m/%Y') }}</p>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endfor %}
+
+
+{% endblock content %}

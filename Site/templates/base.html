@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}" />
+
+    <title>Criticância</title>
+</head>
+
+<body>
+
+    <main>
+        <header class="top-header">
+
+            <div class="menu">
+                <a href="{{ url_for('views.home') }}">
+                    <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}">
+                </a>
+
+                <ul class="menu-buttons">
+                    <li>
+                        <a href="{{ url_for('views.filmes') }}">Filmes</a>
+                    </li>
+
+                    <li>
+                        <a href="{{ url_for('views.series') }}">Séries</a>
+                    </li>
+
+                    <li>
+                        <a href="{{ url_for('views.criticast') }}">CritiCast</a>
+                    </li>
+
+                    <li>
+                        <a href="{{ url_for('views.games') }}">Games</a>
+                    </li>
+                </ul>
+
+                <div class="social">
+                    <ul>
+                        <li>
+                            <a href="https://instagram.com/criticancia">
+                                <img class="insta" src="{{ url_for('static', filename='img/icons/insta.png') }}">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </header>
+
+        <div class="mid">
+            {% block content %}
+            {% endblock content %}
+        </div>
+
+        <footer class="footer">
+            <p class="creditos">Design e Desenvolvimento por Krehan</p>
+
+            <p class="marca">2020 Criticância| Versão 0.1<br>
+                Todas as imagens de filmes, séries e etc são marcas registradas
+                dos seus respectivos proprietários.</p>
+        </footer>
+
+    </main>
+</body>
+
+</html>
