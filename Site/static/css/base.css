@@ -1,13 +1,18 @@
+/* -------------- RESET ------------- */
+
+* {margin: 0; padding: 0; border: none; outline: none;
+ box-sizing: border-box; font-family: 'Montserrat', sans-serif;}
+
+
+/* --------------CSS ---------------- */
+
 .top-header {
     background-color: #323232;
-    width: 1920px;
-    height: 100px;
-    margin-top: -10px;
-    margin-left: -8px;
+    width: 100%;
 }
 
 .menu {
-    width: 1320px;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -19,7 +24,6 @@
     display: inline-block;
     list-style: none;
     font-size: 20px;
-    font-family: Ebrima;
     position: absolute;
     padding: 15px;
     margin-left: 20px;
@@ -40,7 +44,7 @@ margin-left: 80px;
 }
 
 .mid {
-    width: 1320px;
+    width: 70%;
     margin: 0 auto;
     height: 100%;
     border-radius: 20px;
@@ -58,14 +62,12 @@ margin-left: 80px;
 .creditos {
     float: right;
     color: #565757;
-    font-family: Ebrima;
     top: 100%;
 }
 
 .marca {
     float: left;
     color: #565757;
-    font-family: Ebrima;
     top: 100%;
 }
 

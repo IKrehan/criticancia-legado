@@ -23,10 +23,16 @@ def filmes():
 def series():
     return render_template("series.html")
 
-
 @views.route("/criticast")
 def criticast():
     return render_template("criticast.html")
+
+
+@views.route("/criticast/<int:podcast_id>")
+def criticastList(podcast_id):
+    podcast = Podcasts.query.filter_by(id=podcast_id).one()
+
+    return render_template("criticastPost.html", podcast=podcast)
 
 
 @views.route("/games")
