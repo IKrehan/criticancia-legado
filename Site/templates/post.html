@@ -1,10 +1,28 @@
-<h1>{{post.title}}</h1>
+{% extends "base.html" %}
 
-<h3>{{post.subtitle}}</h3>
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/post.css') }}">
 
-<p>{{post.author}}</p>
-<p>{{post.date_posted}}</p>
 
-<div>
+<div class="cabeçalho">
+    <h1 class="title">{{post.title}}</h1>
+
+    <h3 class="subtitle">{{post.subtitle}}</h3>
+
+    <ul class="info">
+        <li>
+            <p class="author">{{post.author}}</p>
+        </li>
+
+        <li>
+            <p class="date">{{ post.date_posted.strftime('%d/%m/%Y') }}</p>
+        </li>
+    </ul>
+</div>
+
+
+<div class="content">
     {{post.content|safe}}
 </div>
+
+{% endblock content %}

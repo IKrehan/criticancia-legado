@@ -12,7 +12,7 @@ ul li a {
 .category {
     font-family: Ebrima;
     color: #ffee00;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .title {
@@ -27,7 +27,7 @@ ul li a {
     color: #686868;
     width: 440px;
     margin-left: 25px;
-
+    margin-top: 10px;
 }
 
 .info {
@@ -55,7 +55,7 @@ box-primaria*/
 
 .text-box-primaria {
     float: right;
-    margin-top: 25px;
+    margin-top: 75px;
     margin-right: 25px;
 }
 
@@ -64,12 +64,12 @@ box-secundaria*/
 
 .box-secundaria {
     margin-top: 15px;
-    margin-left: -15px;
+    margin-right: 15px;
     display: inline-block;
-    padding: 15px;
 }
+
 .title-li {
-    margin-top: -20px;
+    margin-top: 10px;
 }
 
 .img-medium {
@@ -78,9 +78,12 @@ box-secundaria*/
     height: 348px;
 }
 
+.text-box-secundaria-post1 {
+    margin-left: 60px;
+}
+
 .info-box-secundaria-post1 {
     margin-left: -60px;
-    margin-top: -40px;
 }
 
 .info-box-secundaria-post1 li {
@@ -92,6 +95,7 @@ box-secundaria*/
 News*/
 
 .header-news-title {
+    margin-top: 60px;
     margin-left: 20px;
     font-size: 25px;
 }
@@ -99,13 +103,13 @@ News*/
 .line-news {
     border-top: 2px solid;
     border-color: #ffee00;
-    width: 1180px;
+    width: 1160px;
     float: right;
-    margin-top: -40px;
+    margin-top: -15px;
 }
 
 .box-news {
-    margin-top: 25px;
+    margin-top: 50px;
 }
 
 .img-small {
@@ -116,8 +120,8 @@ News*/
 
 .text-box-news {
     float: right;
-    margin-right: 300px;
-    margin-top: -200px;
+    margin-right: 275px;
+    margin-top: -180px;
 }
 
 .title-box-news {
