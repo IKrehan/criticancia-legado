@@ -16,28 +16,41 @@ def home():
 
 @views.route("/filmes")
 def filmes():
-    return render_template("filmes.html")
+    posts = Posts.query.filter_by(category='filmes').all()
+    posts_size = len(posts)
+
+    return render_template("category.html", posts=posts, posts_size=posts_size)
 
 
 @views.route("/series")
 def series():
-    return render_template("series.html")
+    posts = Posts.query.filter_by(category='series').all()
+    posts_size = len(posts)
 
-@views.route("/criticast")
-def criticast():
-    return render_template("criticast.html")
-
-
-@views.route("/criticast/<int:podcast_id>")
-def criticastList(podcast_id):
-    podcast = Podcasts.query.filter_by(id=podcast_id).one()
-
-    return render_template("criticastPost.html", podcast=podcast)
+    return render_template("category.html", posts=posts, posts_size=posts_size)
 
 
 @views.route("/games")
 def games():
-    return render_template("games.html")
+    posts = Posts.query.filter_by(category='games').all()
+    posts_size = len(posts)
+
+    return render_template("category.html", posts=posts, posts_size=posts_size)
+
+
+@views.route("/criticast")
+def criticast():
+    posts = Podcasts.query.all()
+    posts_size = len(posts)
+
+    return render_template("criticast.html", posts=posts, posts_size=posts_size)
+
+
+@views.route("/criticast/<int:podcast_id>")
+def criticastPost(podcast_id):
+    podcast = Podcasts.query.filter_by(id=podcast_id).one()
+
+    return render_template("criticastPost.html", podcast=podcast)
 
 
 @views.route("/post/<int:post_id>")

@@ -35,10 +35,10 @@
 </div>
 
 {% for podcast in podcasts[:podcasts_size-3:-1] %}
-<div class="box-secundaria">
+<div class="box-secundaria     v{{ loop.index0 }}">
     <div class="box-secundaria-post1">
         <div class="box-secundaria-post1-img">
-            <a href="{{ url_for('views.home') }}">
+            <a href="{{ url_for('views.criticastPost', podcast_id=podcast.id) }}">
                 <img class="img-medium" src="{{ url_for('static', filename=podcast.banner) }}">
             </a>
         </div>
@@ -52,7 +52,7 @@
                 </li>
 
                 <li class="title-li">
-                    <a href="{{ url_for('views.home') }}">
+                    <a href="{{ url_for('views.criticastPost', podcast_id=podcast.id) }}">
                         <h2 class="title title-box-secundaria-post1">{{ podcast.title }}</h2>
                     </a>
                 </li>
@@ -73,7 +73,9 @@
         </div>
     </div>
 </div>
+
 {% endfor %}
+
 
 <header class="header-news">
     <h3 class="category header-news-title">Notícias</h3>

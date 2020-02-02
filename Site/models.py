@@ -26,6 +26,7 @@ class Podcasts(db.Model):
     duration = db.Column(db.String(100))
     date_posted = db.Column(db.DateTime)
     banner = db.Column(db.String(200))
+    category = 'criticast'
 
 
 class MyModelView(ModelView):

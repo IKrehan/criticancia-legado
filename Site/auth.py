@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, redirect
+from flask import Blueprint, render_template, redirect, request
 from .extensions import login_user, logout_user
 from .models import Adms
 
@@ -11,8 +11,8 @@ def Login():
 
 @auth.route("/admlogin", methods=['GET' ,'POST'])
 def admLogin():
-    # username = request.form['username']
-    # password = request.form['passsword']
+    username = request.form['username']
+    password = request.form['passsword']
 
     user = Adms.query.get(1)
 

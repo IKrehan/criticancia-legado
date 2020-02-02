@@ -1,0 +1,72 @@
+.mid {
+    width: 60%;
+    height: 100%;
+}
+
+.podcast {
+    text-align: center;
+    margin-top: 3%;
+}
+
+.banner {
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+.category {
+    font-weight: bold;
+    font-size: 30px;
+    color: #ffee00;
+    margin-top: -12%;
+    margin-right: 80%;
+    text-shadow: 1px 1px 1px #000;
+}
+
+
+.title {
+    font-weight: bold;
+    color: white;
+    font-size: 40px;
+    margin-left: -40%;
+    margin-bottom: 6%;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.duration {
+    margin-left: -87%;
+    margin-top: -6%;
+    margin-bottom: 5%;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.date {   
+    margin-top: -14%;
+    margin-bottom: 10%;
+    margin-left: -55%;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.button {
+    float: right;
+    border-radius: 45px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    border: 1px solid transparent;
+    padding: 6px 14px 10px;
+    text-align: center;
+    cursor: pointer;
+    background: #ffb907;
+    color: #fff;
+    border-color: #ffb907;
+    width: 20%;
+    margin-left: 2%;
+    margin-top: .5%;
+}

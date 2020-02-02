@@ -12,7 +12,7 @@
 
     <script src="https://kit.fontawesome.com/43fb59542f.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
-    <link rel="icon" href="{{ url_for('static', filename='img/icons/icon.ico') }}.ico" type="image/x-icon" />
+    <link rel="icon" href="{{ url_for('static', filename='img/icons/icon.ico') }}" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}" />
 
     <title>Criticância</title>
@@ -29,6 +29,11 @@
                 </a>
 
                 <ul class="menu-buttons">
+
+                    <li>
+                        <a href="{{ url_for('views.criticast') }}">CritiCast</a>
+                    </li>
+
                     <li>
                         <a href="{{ url_for('views.filmes') }}">Filmes</a>
                     </li>
@@ -38,23 +43,9 @@
                     </li>
 
                     <li>
-                        <a href="{{ url_for('views.criticast') }}">CritiCast</a>
-                    </li>
-
-                    <li>
                         <a href="{{ url_for('views.games') }}">Games</a>
                     </li>
                 </ul>
-
-                <div class="social">
-                    <ul>
-                        <li>
-                            <a href="https://instagram.com/criticancia">
-                                <img class="insta" src="{{ url_for('static', filename='img/icons/insta.png') }}">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
 
             </div>
 
@@ -65,13 +56,13 @@
             {% endblock content %}
         </div>
 
-        <footer class="footer">
+        <!-- <footer class="footer">
             <p class="creditos">Design e Desenvolvimento por Krehan</p>
 
             <p class="marca">2020 Criticância| Versão 0.1<br>
                 Todas as imagens de filmes, séries e etc são marcas registradas
                 dos seus respectivos proprietários.</p>
-        </footer>
+        </footer> -->
 
     </main>
 </body>

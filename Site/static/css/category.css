@@ -1,0 +1,74 @@
+/*------------------------------------------------------------------
+common classes*/
+
+ul {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+.category {
+    font-family: Ebrima;
+    color: #ffee00;
+    font-size: 25px;
+}
+
+.title {
+    text-decoration: none;
+    font-family: Ebrima;
+    color: black;
+    width: 450px;
+}
+
+.desc {
+    font-family: Ebrima;
+    color: #686868;
+    width: 440px;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.info {
+    font-family: Ebrima;
+    color: #686868;
+    margin-left: 25px;
+}
+
+/*------------------------------------------------------------------
+POST*/
+
+.header-title {
+    margin-top: 60px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+
+.line {
+    border-top: 2px solid;
+    border-color: #ffee00;
+    width: 1160px;
+    float: right;
+    margin-top: -15px;
+}
+
+.box {
+    margin-top: 50px;
+}
+
+.img-small {
+    border-radius: 20px;
+    widows: 388px;
+    height: 226px;
+}
+
+.text-box {
+    float: right;
+    margin-right: 275px;
+    margin-top: -180px;
+}
+
+.title-box {
+    width: 600px;
+}
