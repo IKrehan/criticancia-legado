@@ -10,6 +10,7 @@ ul li a {
 }
 
 .category {
+    text-shadow: .5px .5px .5px #ffb907;
     font-family: Ebrima;
     color: #ffee00;
     font-size: 25px;

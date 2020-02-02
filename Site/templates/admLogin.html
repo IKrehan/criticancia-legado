@@ -1,57 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-	<title>Adm Login</title>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="{{url_for('static', filename='img/icons/favicon.ico') }}" />
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/admLogin/animate.css') }}">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/admLogin/select2.min.css') }}">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/admLogin/daterangepicker.css') }}">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/admLogin/animate.css') }}">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/admLogin/util.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/admLogin/main.css') }}">
-	<!--===============================================================================================-->
+	<title>Flask Auth Example</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
 </head>
 
 <body>
+	<section class="hero is-primary is-fullheight">
 
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				<form class="login100-form validate-form p-l-55 p-r-55 p-t-178" action="{{ url_for('auth.admLogin') }}">
-					<span class="login100-form-title">
-						Sign In
-					</span>
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				<div class="column is-4 is-offset-4">
+					<h3 class="title">Login</h3>
+					<div class="box">
+						<form method="POST" action="/login">
+							<div class="field">
+								<div class="control">
+									<input class="input is-large" type="text" name="username" placeholder="Username"
+										autofocus="">
+								</div>
+							</div>
 
-					<div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
-						<input class="input100" type="text" name="username" placeholder="Username">
-						<span class="focus-input100"></span>
+							<div class="field">
+								<div class="control">
+									<input class="input is-large" type="password" name="password"
+										placeholder="Your Password">
+								</div>
+							</div>
+							<div class="field">
+								<label class="checkbox">
+									<input type="checkbox">
+									Remember me
+								</label>
+							</div>
+							<button class="button is-block is-info is-large is-fullwidth">Login</button>
+						</form>
 					</div>
-
-					<div class="wrap-input100 validate-input" data-validate="Please enter password">
-						<input class="input100" type="password" name="password" placeholder="Password">
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Sign in
-						</button>
-					</div>
-
-				</form>
+				</div>
 			</div>
 		</div>
-	</div>
-
+	</section>
 </body>
 
 </html>

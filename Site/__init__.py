@@ -26,8 +26,8 @@ def create_app(config_file='config.py'):
 
     #execute db commands when the server is executed (toggle comment to use)
     # with app.app_context():
-    #     db.create_all()
-        # a = Adms(username='Krehan', password='info1590')
+        # db.create_all()
+        # a = Adms(username='Criticante007', password='sha256$tmFgjPS7$7db9cba81f974237ee61837eb650b6e6f3adc844a610fff295d23fdc2ce15df5')
         # db.session.add(a)
         # db.session.commit()
 
