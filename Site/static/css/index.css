@@ -11,20 +11,20 @@ ul li a {
 
 .category {
     text-shadow: .5px .5px .5px #ffb907;
-    font-family: Ebrima;
+    font-family: 'Montserrat', sans-serif;
     color: #ffee00;
     font-size: 25px;
 }
 
 .title {
     text-decoration: none;
-    font-family: Ebrima;
+    font-family: 'Montserrat', sans-serif;
     color: black;
     width: 450px;
 }
 
 .desc {
-    font-family: Ebrima;
+    font-family: 'Montserrat', sans-serif;
     color: #686868;
     width: 440px;
     margin-left: 6%;
@@ -32,7 +32,7 @@ ul li a {
 }
 
 .info {
-    font-family: Ebrima;
+    font-family: 'Montserrat', sans-serif;
     color: #686868;
 }
 
