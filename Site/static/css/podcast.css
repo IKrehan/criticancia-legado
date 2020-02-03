@@ -71,3 +71,14 @@
     margin-left: 2%;
     margin-top: .5%;
 }
+
+.desc-title {
+    margin-top: 12%;
+    margin-left: -40%;
+}
+
+.desc {
+    text-align: left;
+    margin-top: -1.8%;
+    margin-left: 16%;
+}

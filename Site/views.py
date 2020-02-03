@@ -1,4 +1,6 @@
-from flask import Blueprint, render_template
+import os
+
+from flask import Blueprint, render_template, send_from_directory
 
 from .models import Posts, Adms, Podcasts
 from .extensions import login
@@ -51,6 +53,12 @@ def criticastPost(podcast_id):
     podcast = Podcasts.query.filter_by(id=podcast_id).one()
 
     return render_template("criticastPost.html", podcast=podcast)
+
+
+@views.route("/criticast/download/CritiCast<int:podcast_id>")
+def podcastDownload(podcast_id):
+
+    return send_from_directory('static\podcasts', filename=f'CritiCast-{podcast_id}.mp3')
 
 
 @views.route("/post/<int:post_id>")

@@ -11,7 +11,9 @@ def create_app(config_file='config.py'):
 
     app.config.from_pyfile(config_file)
 
+
     db.init_app(app)
+
     admin.init_app(app, index_view=MyAdminIndexView())
     login.init_app(app)
 

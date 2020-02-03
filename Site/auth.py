@@ -5,12 +5,12 @@ from .models import Adms
 
 auth = Blueprint('auth', __name__)
 
-@auth.route("/adm")
+@auth.route("/mucegoeh")
 def Login():
     return render_template('admLogin.html')
 
 
-@auth.route('/login', methods=['POST'])
+@auth.route('/wBHepKTI', methods=['GET', 'POST'])
 def login_post():
     username = request.form.get('username')
     password = request.form.get('password')

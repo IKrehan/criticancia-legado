@@ -21,17 +21,19 @@
 
     <p class="date">{{ podcast.date_posted.strftime('%d/%m/%Y') }}</p>
 
-    <button class="button">
-        <i class="fas fa-download"></i> Download
-    </button>
+    <a href="{{ url_for('views.podcastDownload', podcast_id=podcast.id) }}">
+        <button class="button">
+            <i class="fas fa-download"></i> Download
+        </button>
+    </a>
 
     <button class="button">
         <i class="fas fa-play"></i> Play
     </button>
 
+    <h3 class="desc-title">Neste CritiCast:</h3>
 
-
-    <p class="subtitle">{{podcast.desc.capitalize()}}</p>
+    <p class="desc">{{podcast.desc.capitalize()}}</p>
 </div>
 
 {% endblock content %}
