@@ -6,7 +6,7 @@ from .views import views
 from .auth import auth
 
 
-def create_app(config_file='config.py', *args **kwargs):
+def create_app(config_file='config.py'):
     app = Flask(__name__)
 
     app.config.from_pyfile(config_file)
