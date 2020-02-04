@@ -27,13 +27,46 @@
         </button>
     </a>
 
-    <button class="button">
-        <i class="fas fa-play"></i> Play
-    </button>
-
     <h3 class="desc-title">Neste CritiCast:</h3>
 
     <p class="desc">{{podcast.desc.capitalize()}}</p>
+
+    <div class="player" controls>
+        <audio id="podcast-play">
+            <source src="{{ url_for('static', filename='podcasts/CritiCast-%s.mp3' % (podcast.id)) }}" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+
+        <div class="player-menu"> 
+
+            <button id="backwardButton" class="pb backward" onclick="backwardAudio()">
+                <i class="fas fa-backward"></i>
+            </button>
+
+            <button id="pButton" class="pb play" onclick="playAudio()">
+                <i id="playB" class="fas fa-play"></i>
+            </button>
+
+            <button id="forwardButton" class="pb forward" onclick="forwardAudio()">
+                <i class="fas fa-forward"></i>
+            </button>
+
+        </div>
+
+
+        <div class="sound-title">
+            <p>{{podcast.title}}</p>
+        </div>
+
+
+        <div class="timeline" id="timeline">
+            <div class="playhead" id="playhead"></div>
+        </div>
+
+    </div>
+
+
 </div>
 
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
 {% endblock content %}

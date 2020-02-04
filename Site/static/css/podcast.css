@@ -73,12 +73,67 @@
 }
 
 .desc-title {
-    margin-top: 12%;
-    margin-left: -40%;
+    float: left;
 }
 
 .desc {
+    float: left;
     text-align: left;
-    margin-top: -1.8%;
-    margin-left: 16%;
+    margin-top: .2%;
+    margin-left: 1%;
+}
+
+.player {
+    background-color: #323232;
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:8%;   /* Height of the footer */
+   margin-left: -20%
+}
+
+.player-menu {
+    padding: .6%;
+    margin-left: 2%;
+}
+
+.player-menu button {
+    margin-left: 5%;
+}
+
+.pb {
+    background: transparent;
+    font-size: 35px;
+    float: left;
+    cursor: pointer;
+    color: white;
+}
+
+.pb:hover {
+    color: #ffee00;
+}
+
+.sound-title {
+    float: left;
+    margin-left: 5%;
+    color: white;
+    font-size: 23px;
+    margin-top: -.2%;
+}
+
+.timeline {
+    width: 30%;
+    height: 20%;
+    background: white;
+    margin-top: .2%;
+    float: right;
+    border-radius: 15px;
+    margin-right: 19%;
+}
+
+.playhead {
+    width: 3%;
+    height: 95%;
+    border-radius: 50%;
+    background: #ffee00;
 }
