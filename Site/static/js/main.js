@@ -1,6 +1,6 @@
 var sound = document.getElementById('podcast-play');
-var forward = document.getElementById('forwardButton');
-var backward = document.getElementById('backwardButton');
+var forw_button = document.getElementById('forwardButton');
+var back_button = document.getElementById('backwardButton');
 
 /* Play\Pause Button */ 
 function playAudio() {
