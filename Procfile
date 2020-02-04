@@ -1,1 +1,1 @@
-web: gunicorn -w 4 __init__:Site
+web: gunicorn Site:app
