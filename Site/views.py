@@ -1,6 +1,6 @@
 import os
 
-from flask import Blueprint, render_template, send_from_directory
+from flask import Blueprint, render_template, send_file
 
 from .models import Posts, Adms, Podcasts
 from .extensions import login
@@ -55,10 +55,10 @@ def criticastPost(podcast_id):
     return render_template("criticastPost.html", podcast=podcast)
 
 
-@views.route("/criticast/download/CritiCast<int:podcast_id>")
+@views.route("/criticast/download/<int:podcast_id>")
 def podcastDownload(podcast_id):
 
-    return send_from_directory('static\podcasts', filename=f'CritiCast-{podcast_id}.mp3')
+    return send_file(f'static/podcasts/CritiCast-{podcast_id}.mp3', attachment_filename=f'CritiCast-{podcast_id}.mp3')
 
 
 @views.route("/post/<int:post_id>")
