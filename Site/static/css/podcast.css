@@ -94,7 +94,7 @@
 
 .player-menu {
     padding: .6%;
-    margin-left: 2%;
+    margin-left: 0%;
 }
 
 .player-menu button {
@@ -122,18 +122,51 @@
 }
 
 .timeline {
-    width: 30%;
+    width: 21%;
     height: 20%;
     background: white;
     margin-top: .2%;
     float: right;
     border-radius: 15px;
-    margin-right: 19%;
+    margin-right: 7%;
 }
 
 .playhead {
-    width: 3%;
+    width: 4%;
     height: 95%;
     border-radius: 50%;
     background: #ffee00;
+}
+
+.sound-volume {
+    width: 10%;
+    height: 20%;
+    background: white;
+    margin-top: .2%;
+    float: right;
+    border-radius: 15px;
+    margin-right: 10%;
+}
+
+.soundhead {
+    width: 8%;
+    height: 96%;
+    border-radius: 50%;
+    background: #ffee00;
+    margin-top: -11%;
+}
+
+#volUpIcon {
+    color: white;
+    font-size: 25px;
+    margin-left: 110%;
+    margin-top: -2.5%;
+}
+
+#volDownIcon {
+    color: white;
+    font-size: 28px;
+    margin-left: -7.5%;
+    margin-top: -1.1%;
+    position: absolute;
 }
