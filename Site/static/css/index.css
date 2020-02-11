@@ -56,7 +56,7 @@ box-primaria*/
 
 .text-box-primaria {
     float: right;
-    margin-top: 4%;
+    margin-top: 6%;
     margin-right: 3%;
 }
 
@@ -88,7 +88,7 @@ box-secundaria*/
 }
 
 .text-box-secundaria-post1 {
-    margin-left: 12%;
+    margin-left: 7%;
 }
 
 .info-box-secundaria-post1 {
@@ -112,7 +112,7 @@ News*/
 .line-news {
     border-top: 2px solid;
     border-color: #ffee00;
-    width: 1160px;
+    width: 1100px;
     float: right;
     margin-top: -15px;
 }
@@ -133,8 +133,8 @@ News*/
 
 .text-box-news {
     float: right;
-    margin-right: 275px;
-    margin-top: -16%;
+    margin-right: 20%;
+    margin-top: -14%;
 }
 
 .title-box-news {
