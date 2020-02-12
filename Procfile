@@ -1,1 +1,1 @@
-web: gunicorn Site:'create_app()' web=2
+web: gunicorn Site:'create_app()'
