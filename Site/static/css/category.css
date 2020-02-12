@@ -20,21 +20,19 @@ ul li a {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     color: black;
-    width: 450px;
 }
 
 .desc {
     font-family: 'Montserrat', sans-serif;
     color: #686868;
-    width: 440px;
-    margin-left: 25px;
-    margin-top: 10px;
+    margin-left: 3%;
+    margin-top: 1%;
 }
 
 .info {
     font-family: 'Montserrat', sans-serif;
     color: #686868;
-    margin-left: 25px;
+    margin-left: 2%;
 }
 
 /*------------------------------------------------------------------
@@ -42,21 +40,20 @@ POST*/
 
 .header-title {
     text-shadow: .5px .5px .5px #ffb907;
-    margin-top: 60px;
-    margin-left: 20px;
-    font-size: 25px;
+    margin-top: 5%;
+    font-size: 30px;
 }
 
 .line {
     border-top: 2px solid;
     border-color: #ffee00;
-    width: 1160px;
+    width: 85%;
     float: right;
-    margin-top: -15px;
+    margin-top: -1.5%;
 }
 
 .box {
-    margin-top: 50px;
+    margin-top: 4%;
 }
 
 .img-small {
@@ -67,8 +64,8 @@ POST*/
 
 .text-box {
     float: right;
-    margin-right: 275px;
-    margin-top: -180px;
+    margin-right: 20%;
+    margin-top: -13%;
 }
 
 .title-box {
