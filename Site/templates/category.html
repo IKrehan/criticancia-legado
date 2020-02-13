@@ -12,7 +12,7 @@
 
 {% for post in posts[posts_size-1::-1] %}
 
-<div class="box">
+<article class="box">
     <div class="box-banner">
         <a href="{{ url_for('views.post', post_id=post.id) }}">
             <img class="img-small" src="{{ url_for('static', filename=post.banner) }}">
@@ -38,7 +38,7 @@
             </li>
         </ul>
     </div>
-</div>
+</article>
 {% endfor %}
 
 </div>

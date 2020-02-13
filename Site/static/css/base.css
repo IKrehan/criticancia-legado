@@ -8,25 +8,18 @@
 
 .top-header {
     background-color: #323232;
-    width: 100%;
-}
-
-.menu {
-    width: 70%;
-    margin: 0 auto;
 }
 
 .logo {
     padding: 1.5%;
+    width: 20%
 }
 
 .menu-buttons {
     display: inline-block;
     list-style: none;
-    font-size: 20px;
-    position: absolute;
-    padding: 2%;
-    margin-left: 12%;
+    font-size: 1.3vw;
+    margin-left: 15%;
 }
 
 .menu-buttons li {

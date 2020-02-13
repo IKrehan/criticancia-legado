@@ -5,35 +5,30 @@ ul {
     list-style: none;
 }
 
-ul li a {
-    text-decoration: none;
-}
-
 .category {
     text-shadow: .5px .5px .5px #ffb907;
     font-family: 'Montserrat', sans-serif;
     color: #ffee00;
-    font-size: 25px;
+    font-weight: bold;
+    font-size: 2vw;
 }
 
 .title {
-    text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     color: black;
-    width: 450px;
-}
+    font-weight: bold;
+    font-size: 1.5vw;
 
-.desc {
-    font-family: 'Montserrat', sans-serif;
-    color: #686868;
-    width: 440px;
-    margin-left: 6%;
-    margin-top: 2%;
 }
 
 .info {
     font-family: 'Montserrat', sans-serif;
     color: #686868;
+    font-size: .9vw
+}
+
+.desc {
+    font-size: 1vw;
 }
 
 /*------------------------------------------------------------------
@@ -41,41 +36,22 @@ box-primaria*/
 
 .box-primaria {
     margin-top: 7%;
-}
-
-.banner-box-primaria {
-    float: left;
-    margin-left: 6%;
+    margin-bottom: 3%
 }
 
 .image-big {
     border-radius: 20px;
-    width:688px;
-    height:341px;
+    width: 95%;
+    max-width: 688px;
 }
 
 .text-box-primaria {
-    float: right;
-    margin-top: 6%;
-    margin-right: 3%;
+    margin-top: 8%;
+    margin-left: -3%;
 }
 
 /*------------------------------------------------------------------
 box-secundaria*/
-
-.box-secundaria {
-    margin-top: 3%;
-    display: inline-block;
-}
-
-.v0 {
-    margin-left: 6%;
-}
-
-.v1 {
-    float: right;
-    margin-right: 8%;
-}
 
 .title-li {
     margin-top: 2%;
@@ -83,16 +59,17 @@ box-secundaria*/
 
 .img-medium {
     border-radius: 20px;
-    width: 534px;
-    height: 293px;
+    width: 95%;
+    max-width: 534px;
 }
 
 .text-box-secundaria-post1 {
-    margin-left: 7%;
+    margin-left: 5%;
 }
 
 .info-box-secundaria-post1 {
-    margin-left: -12%;
+    margin-top: -13%;
+    margin-right: -80%;
 }
 
 .info-box-secundaria-post1 li {
@@ -105,38 +82,27 @@ News*/
 
 .header-news-title {
     margin-top: 60px;
-    margin-left: 20px;
-    font-size: 25px;
+    font-size: 1.5vw;
 }
 
 .line-news {
     border-top: 2px solid;
     border-color: #ffee00;
-    width: 1100px;
-    float: right;
-    margin-top: -15px;
+    width: 100%;
+    margin-top: -.8%;
 }
 
 .box-news {
     margin-top: 50px;
 }
 
-.box-news-banner {
-    height: 226px;
-}
-
 .img-small {
     border-radius: 20px;
-    width: 388px;
-    height: 226px;
+    width: 95%;
+    max-width: 388px;
 }
 
 .text-box-news {
-    float: right;
-    margin-right: 20%;
-    margin-top: -14%;
-}
-
-.title-box-news {
-    width: 600px;
+    margin-left: -5%;
+    margin-top: 3%;
 }

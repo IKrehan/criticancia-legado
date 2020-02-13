@@ -3,15 +3,14 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}" />
 
-
-<div class="box-primaria">
-    <div class="banner-box-primaria">
+<article class="row box-primaria">
+    <div class="col-7 banner-box-primaria">
         <a href="{{ url_for('views.post', post_id=posts[posts_size-1].id) }}">
             <img class="image-big" src="{{ url_for('static', filename=posts[posts_size-1].banner) }}">
         </a>
     </div>
 
-    <div class="text-box-primaria">
+    <div class="col-5 text-box-primaria">
         <ul>
             <li>
                 <a href="{{ url_for('views.%s' % (posts[posts_size-1].category)) }}">
@@ -27,10 +26,12 @@
         </ul>
     </div>
 
-</div>
+</article>
 
+
+<div class="row">
 {% for podcast in podcasts[:podcasts_size-3:-1] %}
-<div class="box-secundaria     v{{ loop.index0 }}">
+<article class="col-6 box-secundaria">
     <div class="box-secundaria-post1">
         <div class="box-secundaria-post1-img">
             <a href="{{ url_for('views.criticastPost', podcast_id=podcast.id) }}">
@@ -57,19 +58,16 @@
                         <li>
                             <p>{{ podcast.duration }}</p>
                         </li>
-
-                        <li>
-                            <p>{{ podcast.date_posted.strftime('%d/%m/%Y') }}</p>
-                        </li>
                     </ul>
                 </li>
 
             </ul>
         </div>
     </div>
-</div>
+</article>
 
 {% endfor %}
+</div>
 
 
 <header class="header-news">
@@ -80,14 +78,14 @@
 
 {% for post in posts[posts_size-2::-1] %}
 
-<div class="box-news">
-    <div class="box-news-banner">
+<article class=" row box-news">
+    <div class="col-5 box-news-banner">
         <a href="{{ url_for('views.post', post_id=post.id) }}">
             <img class="img-small" src="{{ url_for('static', filename=post.banner) }}">
         </a>
     </div>
 
-    <div class="text-box-news">
+    <div class="col-5 text-box-news">
         <ul>
             <li>
                 <a href="{{ url_for('views.%s' % (post.category)) }}">
@@ -106,8 +104,7 @@
             </li>
         </ul>
     </div>
-</div>
+</article>
 {% endfor %}
-
 
 {% endblock content %}
