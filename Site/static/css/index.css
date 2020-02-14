@@ -41,13 +41,10 @@ box-primaria*/
 
 .image-big {
     border-radius: 20px;
-    width: 95%;
-    max-width: 688px;
 }
 
 .text-box-primaria {
     margin-top: 8%;
-    margin-left: -3%;
 }
 
 /*------------------------------------------------------------------
@@ -59,8 +56,6 @@ box-secundaria*/
 
 .img-medium {
     border-radius: 20px;
-    width: 95%;
-    max-width: 534px;
 }
 
 .text-box-secundaria-post1 {
@@ -98,11 +93,8 @@ News*/
 
 .img-small {
     border-radius: 20px;
-    width: 95%;
-    max-width: 388px;
 }
 
 .text-box-news {
-    margin-left: -5%;
     margin-top: 3%;
 }

@@ -3,10 +3,11 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}" />
 
+
 <article class="row box-primaria">
     <div class="col-7 banner-box-primaria">
         <a href="{{ url_for('views.post', post_id=posts[posts_size-1].id) }}">
-            <img class="image-big" src="{{ url_for('static', filename=posts[posts_size-1].banner) }}">
+            <img class="image-big img-fluid" src="{{ url_for('static', filename=posts[posts_size-1].banner) }}">
         </a>
     </div>
 
@@ -35,7 +36,7 @@
     <div class="box-secundaria-post1">
         <div class="box-secundaria-post1-img">
             <a href="{{ url_for('views.criticastPost', podcast_id=podcast.id) }}">
-                <img class="img-medium" src="{{ url_for('static', filename=podcast.banner) }}">
+                <img class="img-medium img-fluid" src="{{ url_for('static', filename=podcast.banner) }}">
             </a>
         </div>
 
@@ -81,7 +82,7 @@
 <article class=" row box-news">
     <div class="col-5 box-news-banner">
         <a href="{{ url_for('views.post', post_id=post.id) }}">
-            <img class="img-small" src="{{ url_for('static', filename=post.banner) }}">
+            <img class="img-small img-fluid" src="{{ url_for('static', filename=post.banner) }}">
         </a>
     </div>
 
