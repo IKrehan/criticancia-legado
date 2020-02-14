@@ -13,14 +13,16 @@ ul li a {
     text-shadow: .5px .5px .5px #ffb907;
     font-family: 'Montserrat', sans-serif;
     color: #ffee00;
-    font-size: 25px;
+    font-size: 2vw;
+    font-weight: bold;
 }
 
 .title {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     color: black;
-    font-size: 1.3vw
+    font-size: 2vw;
+    font-weight: bold;
 }
 
 .desc {
@@ -41,13 +43,15 @@ POST*/
 .header-title {
     text-shadow: .5px .5px .5px #ffb907;
     margin-top: 5%;
-    font-size: 30px;
+    font-size: 2.5vw;
+    font-weight: bold;
 }
 
 .line {
     border-top: 2px solid;
     border-color: #ffee00;
     width: 100%;
+    margin-top: -1%;
 }
 
 
@@ -59,12 +63,4 @@ POST*/
 
 .img-small {
     border-radius: 20px;
-    width: 388px;
-    height: 226px;
-}
-
-.text-box {
-    margin-top: 7%;
-    margin-left: 2%;
-    width: 46%;
 }

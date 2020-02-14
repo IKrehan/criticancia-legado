@@ -4,43 +4,46 @@
 
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/category.css') }}">
 
-<header class="header">
-    <h3 class="category header-title">{{ posts[0].category.capitalize() }}</h3>
-    <hr class="line">
+<div class="container rounded">
 
-</header>
+    <header class="header">
+        <h3 class="category header-title">{{ posts[0].category.capitalize() }}</h3>
+        <hr class="line">
 
-{% for post in posts[posts_size-1::-1] %}
+    </header>
 
-<div class="box">
-    <div class="box-banner">
-        <a href="{{ url_for('views.criticastPost', podcast_id=post.id) }}">
-            <img class="img-small rounded" src="{{ url_for('static', filename=post.banner) }}">
-        </a>
+    {% for post in posts[posts_size-1::-1] %}
+
+    <div class="box row">
+        <div class="box-banner col-5">
+            <a href="{{ url_for('views.criticastPost', podcast_id=post.id) }}">
+                <img class="img-small img-fluid" src="{{ url_for('static', filename=post.banner) }}">
+            </a>
+        </div>
+
+        <div class="text-box col-6 my-auto">
+            <ul>
+                <li>
+                    <a href="{{ url_for('views.%s' % (post.category)) }}">
+                        <h2 class="category category-box">{{ post.category.capitalize() }} {{ post.id }}</h2>
+                    </a>
+                </li>
+
+                <li class="title-li">
+                    <a href="{{ url_for('views.criticastPost', podcast_id=post.id) }}">
+                        <h2 class="title title-box">{{ post.title }}</h2>
+                    </a>
+                </li>
+
+                <li>
+                    <p class="desc date_news_post">{{ post.date_posted.strftime('%d/%m/%Y') }}</p>
+                </li>
+            </ul>
+        </div>
     </div>
+    {% endfor %}
 
-    <div class="text-box">
-        <ul>
-            <li>
-                <a href="{{ url_for('views.%s' % (post.category)) }}">
-                    <h2 class="category category-box">{{ post.category.capitalize() }}</h2>
-                </a>
-            </li>
-
-            <li class="title-li">
-                <a href="{{ url_for('views.criticastPost', podcast_id=post.id) }}">
-                    <h2 class="title title-box">{{ post.title }}</h2>
-                </a>
-            </li>
-
-            <li>
-                <p class="desc date_news_post">{{ post.date_posted.strftime('%d/%m/%Y') }}</p>
-            </li>
-        </ul>
     </div>
-</div>
-{% endfor %}
-
 </div>
 
 {% endblock content %}

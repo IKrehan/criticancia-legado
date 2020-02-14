@@ -24,48 +24,48 @@
 <body>
 
     <main>
-        <header class="container-fluid top-header">
+        <nav class="navbar navbar-expand-lg dark">
 
             <div class="container">
-                <a href="{{ url_for('views.home') }}">
+                <a href="{{ url_for('views.home') }}" class="navbar-brand">
                     <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}">
                 </a>
 
-                <ul class="menu-buttons">
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav menu-buttons">
+                        <li class="nav-item">
+                            <a href="{{ url_for('views.criticast') }}">CritiCast</a>
+                        </li >
 
-                    <li>
-                        <a href="{{ url_for('views.criticast') }}">CritiCast</a>
-                    </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('views.filmes') }}">Filmes</a>
+                        </li>
 
-                    <li>
-                        <a href="{{ url_for('views.filmes') }}">Filmes</a>
-                    </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('views.series') }}">Séries</a>
+                        </li>
 
-                    <li>
-                        <a href="{{ url_for('views.series') }}">Séries</a>
-                    </li>
-
-                    <li>
-                        <a href="{{ url_for('views.games') }}">Games</a>
-                    </li>
-                </ul>
-
+                        <li class="nav-item">
+                            <a href="{{ url_for('views.games') }}">Games</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-        </header>
+        </nav>
 
-        <div class="container rounded">
+
             {% block content %}
             {% endblock content %}
-        </div>
 
-        <!-- <footer class="footer">
+
+        <footer class="navbar dark">
             <p class="creditos">Design e Desenvolvimento por Krehan</p>
 
-            <p class="marca">2020 Criticância| Versão 0.1<br>
+            <p class="creditos">2020 Criticância| Versão 0.1<br>
                 Todas as imagens de filmes, séries e etc são marcas registradas
                 dos seus respectivos proprietários.</p>
-        </footer> -->
+        </footer>
 
     </main>
 

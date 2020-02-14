@@ -6,25 +6,17 @@
 
 /* --------------CSS ---------------- */
 
-.top-header {
+.dark {
     background-color: #323232;
 }
 
-.logo {
-    padding: 1.5%;
-    width: 20%;
-    max-width: 209px;
-}
-
 .menu-buttons {
-    display: inline-block;
     list-style: none;
     font-size: 1.3vw;
     margin-left: 15%;
 }
 
 .menu-buttons li {
-    display: inline-block;
     margin-left: 80px;
 }
 
@@ -35,4 +27,13 @@
 
 .menu-buttons li a:hover {
     color: #ffee00;
+}
+
+footer {
+    margin-top: 3%; 
+}
+
+.creditos {
+    color: gray;
+    font-size: 1vw;
 }

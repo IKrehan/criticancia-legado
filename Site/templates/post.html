@@ -3,26 +3,29 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/post.css') }}">
 
+<div class="container rounded">
 
-<div class="cabeçalho">
-    <h1 class="title">{{post.title}}</h1>
+    <div class="cabeçalho">
+        <h1 class="title">{{post.title}}</h1>
 
-    <h3 class="subtitle">{{post.subtitle}}</h3>
+        <h3 class="subtitle">{{post.subtitle}}</h3>
 
-    <ul class="info">
-        <li>
-            <p class="author">{{post.author}}</p>
-        </li>
+        <ul class="info">
+            <li>
+                <p class="author">{{post.author}}</p>
+            </li>
 
-        <li>
-            <p class="date">{{ post.date_posted.strftime('%d/%m/%Y') }}</p>
-        </li>
-    </ul>
-</div>
+            <li>
+                <p class="date">{{ post.date_posted.strftime('%d/%m/%Y') }}</p>
+            </li>
+        </ul>
+    </div>
 
 
-<div class="content">
-    {{post.content|safe}}
+    <div class="content">
+        {{post.content|safe}}
+    </div>
+
 </div>
 
 {% endblock content %}

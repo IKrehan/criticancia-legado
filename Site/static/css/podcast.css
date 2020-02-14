@@ -9,14 +9,14 @@
 }
 
 .banner {
-    width: 100%;
     border-radius: 20px;
-
+    width: 100%;
+    height: 38vw;
 }
 
 .category {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 2vw;
     color: #ffee00;
     margin-top: -12%;
     margin-right: 80%;
@@ -28,7 +28,7 @@
     text-align: left;
     font-weight: bold;
     color: white;
-    font-size: 40px;
+    font-size: 2.5vw;
     margin-left: 3%;
     margin-bottom: 6%;
     text-shadow: 1px 1px 1px #000;
@@ -38,58 +38,54 @@
     margin-left: -87%;
     margin-top: -6%;
     margin-bottom: 5%;
-    font-size: 20px;
+    font-size: 1.3vw;
     font-weight: bold;
     color: white;
     text-shadow: 1px 1px 1px #000;
 }
 
 .date {   
-    margin-top: -14%;
-    margin-bottom: 10%;
+    margin-top: -3%;
     margin-left: -55%;
     color: white;
-    font-size: 16px;
+    font-size: 1.1vw;
     font-weight: bold;
     text-shadow: 1px 1px 1px #000;
 }
 
-.button {
-    float: right;
-    border-radius: 45px;
+.button-box {
+    margin-top: -1%;
+}
+
+.btn-primary {
+    font-size: 1.5vw;
     font-weight: bold;
-    font-size: 24px;
-    line-height: 32px;
-    border: 1px solid transparent;
-    padding: 6px 14px 10px;
-    text-align: center;
-    cursor: pointer;
     background: #ffb907;
-    color: #fff;
     border-color: #ffb907;
-    width: 20%;
-    margin-left: 2%;
-    margin-top: .5%;
+}
+
+.btn-primary:hover {
+    background: #ffee00;
+    border-color: #ffee00;
 }
 
 .desc-title {
     float: left;
+    font-size: 1.2vw;
+    margin-left: 1.5%;
+    font-size: 1.6vw;
 }
 
 .desc {
+    font-size: 1vw;
     float: left;
     text-align: left;
-    margin-top: .2%;
     margin-left: 1%;
+    margin-top: .6%;   
 }
 
 .player {
     background-color: #323232;
-   position:absolute;
-   bottom:0;
-   width:100%;
-   height:8%;   /* Height of the footer */
-   margin-left: -20%
 }
 
 .player-menu {

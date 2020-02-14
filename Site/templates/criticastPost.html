@@ -7,75 +7,38 @@
     <script src="https://kit.fontawesome.com/43fb59542f.js" crossorigin="anonymous"></script>
 </head>
 
-<div class="podcast">
+<div class="container rounded">
 
-    <div class="banner-box">
-        <figure>
-            <img class="banner" src="{{ url_for('static', filename=podcast.banner) }}">
-            <figcaption class="category">CritiCast {{podcast.id}}</figcaption>
-            <figcaption class="title">{{podcast.title}}</figcaption>
-            <figcaption class="duration">{{podcast.duration}}</figcaption>
-            <figcaption class="date">{{ podcast.date_posted.strftime('%d/%m/%Y') }}</figcaption>
-        </figure>
-    </div>
+    <div class="podcast">
 
-    <div class="button-box">
-        <a href="{{ url_for('views.podcastDownload', podcast_id=podcast.id) }}">
-            <button class="button">
-                <i class="fas fa-download"></i> Download
-            </button>
-        </a>
-    </div>
+        <article class="justify-content-center">
+            <img class="banner img-fluid" src="{{ url_for('static', filename=podcast.banner) }}">
 
-    <div class="info-box">
+            <div class="info">
+                <h2 class="category">CritiCast {{podcast.id}}</h2>
+                <p class="date">{{ podcast.date_posted.strftime('%d/%m/%Y') }}</p>
+                <h2 class="title">{{podcast.title}}</h2>
+                <p class="duration">{{podcast.duration}}</p>
+            </div>
+        </article>
 
-        <h3 class="desc-title">Neste CritiCast:</h3>
+        <div class="row">
+            <div class="info-box col-8">
 
-        <p class="desc">{{podcast.desc.capitalize()}}</p>
+                <h3 class="desc-title">Neste CritiCast:</h3>
 
-    </div>
+                <p class="desc">{{podcast.desc.capitalize()}}</p>
 
-    <div class="player" controls>
-        <audio id="podcast-play">
-            <source src="{{ url_for('static', filename='podcasts/CritiCast-%s.mp3' % (podcast.id)) }}" type="audio/mpeg">
-            Your browser does not support the audio tag.
-        </audio>
+            </div>
 
-        <div class="player-menu"> 
-
-            <button id="backwardButton" class="pb backward" onclick="backwardAudio()">
-                <i class="fas fa-backward"></i>
-            </button>
-
-            <button id="pButton" class="pb play" onclick="playAudio()">
-                <i id="playB" class="fas fa-play"></i>
-            </button>
-
-            <button id="forwardButton" class="pb forward" onclick="forwardAudio()">
-                <i class="fas fa-forward"></i>
-            </button>
-
+            <div class="button-box col-4">
+                <a href="{{ url_for('views.podcastDownload', podcast_id=podcast.id) }}">
+                    <button class="btn btn-primary btn-lg">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                </a>
+            </div>
         </div>
-
-
-        <div class="sound-title">
-            <p>{{podcast.title}}</p>
-        </div>
-
-
-        <div class="sound-volume" id="sound-volume">
-            <i id="volUpIcon" class="fas fa-volume-up"></i>
-
-            <div class="soundhead" id="soundhead"></div>
-
-            <i id="volDownIcon" class="fas fa-volume-down"></i>
-        </div>
-
-        <div class="timeline" id="timeline">
-            <div class="playhead" id="playhead"></div>
-        </div>
-
-
     </div>
 
 
