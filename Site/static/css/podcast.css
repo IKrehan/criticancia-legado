@@ -84,3 +84,14 @@
     margin-bottom: 10%;
 }
 
+
+
+.player {
+    background: #323232;
+}
+
+.btn-p {
+    background-color: #323232;
+    font-size: 1.7vw;
+    color: white;
+}
