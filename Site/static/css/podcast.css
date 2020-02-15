@@ -10,43 +10,42 @@
 
 .banner {
     border-radius: 20px;
-    width: 100%;
-    height: 38vw;
+}
+
+.info {
+    margin-top: -12%;
+    margin-bottom: 5%;
 }
 
 .category {
     font-weight: bold;
     font-size: 2vw;
     color: #ffee00;
-    margin-top: -12%;
-    margin-right: 80%;
     text-shadow: 1px 1px 1px #ffb907;
 }
 
 
 .title {
+    margin-left: 2%;
     text-align: left;
     font-weight: bold;
     color: white;
     font-size: 2.5vw;
-    margin-left: 3%;
-    margin-bottom: 6%;
     text-shadow: 1px 1px 1px #000;
 }
 
 .duration {
-    margin-left: -87%;
-    margin-top: -6%;
-    margin-bottom: 5%;
-    font-size: 1.3vw;
+    margin-left: -10%;
+    margin-top: .6%;
+    font-size: 1.1vw;
     font-weight: bold;
     color: white;
     text-shadow: 1px 1px 1px #000;
 }
 
-.date {   
-    margin-top: -3%;
-    margin-left: -55%;
+.date {
+    margin-left: -7%;
+    margin-top: .6%;
     color: white;
     font-size: 1.1vw;
     font-weight: bold;
@@ -81,88 +80,7 @@
     float: left;
     text-align: left;
     margin-left: 1%;
-    margin-top: .6%;   
+    margin-top: .6%;
+    margin-bottom: 10%;
 }
 
-.player {
-    background-color: #323232;
-}
-
-.player-menu {
-    padding: .6%;
-    margin-left: 0%;
-}
-
-.player-menu button {
-    margin-left: 5%;
-}
-
-.pb {
-    background: transparent;
-    font-size: 35px;
-    float: left;
-    cursor: pointer;
-    color: white;
-}
-
-.pb:hover {
-    color: #ffee00;
-}
-
-.sound-title {
-    float: left;
-    margin-left: 5%;
-    color: white;
-    font-size: 23px;
-    margin-top: -.2%;
-}
-
-.timeline {
-    width: 21%;
-    height: 20%;
-    background: white;
-    margin-top: .2%;
-    float: right;
-    border-radius: 15px;
-    margin-right: 7%;
-}
-
-.playhead {
-    width: 4%;
-    height: 95%;
-    border-radius: 50%;
-    background: #ffee00;
-}
-
-.sound-volume {
-    width: 10%;
-    height: 20%;
-    background: white;
-    margin-top: .2%;
-    float: right;
-    border-radius: 15px;
-    margin-right: 10%;
-}
-
-.soundhead {
-    width: 8%;
-    height: 96%;
-    border-radius: 50%;
-    background: #ffee00;
-    margin-top: -11%;
-}
-
-#volUpIcon {
-    color: white;
-    font-size: 25px;
-    margin-left: 110%;
-    margin-top: -2.5%;
-}
-
-#volDownIcon {
-    color: white;
-    font-size: 28px;
-    margin-left: -7.5%;
-    margin-top: -1.1%;
-    position: absolute;
-}

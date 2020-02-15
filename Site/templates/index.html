@@ -42,6 +42,11 @@
 
             <div class="text-box-secundaria-post1">
                 <ul>
+
+                    <li class="info info-box-secundaria-post1">
+                        <p>{{ podcast.duration }}</p>
+                    </li>
+
                     <li>
                         <a href="{{ url_for('views.criticast') }}">
                             <h2 class="category category-box-secundaria-post1">CritiCast</h2>
@@ -52,14 +57,6 @@
                         <a href="{{ url_for('views.criticastPost', podcast_id=podcast.id) }}">
                             <h2 class="title title-box-secundaria-post1">{{ podcast.title }}</h2>
                         </a>
-                    </li>
-
-                    <li>
-                        <ul class="info info-box-secundaria-post1">
-                            <li>
-                                <p>{{ podcast.duration }}</p>
-                            </li>
-                        </ul>
                     </li>
 
                 </ul>
@@ -86,7 +83,7 @@
             </a>
         </div>
 
-        <div class="col-5 text-box-news">
+        <div class="col-6 text-box-news">
             <ul>
                 <li>
                     <a href="{{ url_for('views.%s' % (post.category)) }}">

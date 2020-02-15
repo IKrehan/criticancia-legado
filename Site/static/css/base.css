@@ -12,7 +12,7 @@
 
 .menu-buttons {
     list-style: none;
-    font-size: 1.3vw;
+    font-size: 1vw;
     margin-left: 15%;
 }
 
@@ -35,5 +35,11 @@ footer {
 
 .creditos {
     color: gray;
-    font-size: 1vw;
+    font-size: .8vw;
+}
+
+.royal {
+    text-align: right;
+    color: gray;
+    font-size: .8vw;
 }

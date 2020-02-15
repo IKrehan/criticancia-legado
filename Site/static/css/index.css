@@ -63,8 +63,8 @@ box-secundaria*/
 }
 
 .info-box-secundaria-post1 {
-    margin-top: -13%;
-    margin-right: -80%;
+    float: right;
+    padding: 10px;
 }
 
 .info-box-secundaria-post1 li {
