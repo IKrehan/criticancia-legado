@@ -12,13 +12,18 @@
     <div class="podcast">
 
         <article class="justify-content-center">
-            <img class="banner img-fluid" src="{{ url_for('static', filename=podcast.banner) }}">
+            <img class="banner img-fluid w-100" src="{{ url_for('static', filename=podcast.banner) }}">
 
             <div class="info">
-                <h2 class="category">CritiCast {{podcast.id}}</h2>
-                <p class="date">{{ podcast.date_posted.strftime('%d/%m/%Y') }}</p>
-                <h2 class="title">{{podcast.title}}</h2>
-                <p class="duration">{{podcast.duration}}</p>
+                <div class="row">
+                    <h2 class="category col-3">CritiCast {{podcast.id}}</h2>
+                    <p class="date col-3">{{ podcast.date_posted.strftime('%d/%m/%Y') }}</p>
+                    <p class="duration col-3">{{podcast.duration}}</p>
+                </div>
+
+                <div class="row">
+                    <h2 class="title col-9">{{podcast.title}}</h2>
+                </div>
             </div>
         </article>
 
