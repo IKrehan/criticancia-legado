@@ -14,8 +14,8 @@ ul {
 }
 
 .title {
+    color: var(--text);
     font-family: 'Montserrat', sans-serif;
-    color: black;
     font-weight: bold;
     font-size: 1.5vw;
 
@@ -29,6 +29,7 @@ ul {
 
 .desc {
     font-size: 1vw;
+    color: #686868;
 }
 
 /*------------------------------------------------------------------

@@ -1,6 +1,7 @@
 /*------------------------------------------------------------------
 common classes*/
 
+
 ul {
     list-style: none;
 }
@@ -20,7 +21,7 @@ ul li a {
 .title {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    color: black;
+    color: var(--text);
     font-size: 2vw;
     font-weight: bold;
 }

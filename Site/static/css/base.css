@@ -6,8 +6,30 @@
 
 /* --------------CSS ---------------- */
 
+html {
+    --bg: #FCFCFC;
+    --text: black;
+}
+
+html[data-theme='dark'] {
+    --bg: #1f1f1f;
+    --text: white;
+}
+
+body {
+    background-color: var(--bg);
+}
+
 .dark {
-    background-color: #323232;
+    background-color: #18181b;
+}
+
+.title {
+    color: var(--text);
+}
+
+.main {
+    margin-bottom: 2%;
 }
 
 .menu-buttons {
@@ -34,12 +56,12 @@ footer {
 }
 
 .creditos {
-    color: gray;
+    color: #686868;
     font-size: .8vw;
 }
 
 .royal {
     text-align: right;
-    color: gray;
+    color: #686868;
     font-size: .8vw;
 }
