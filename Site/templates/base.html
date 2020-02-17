@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary active">
+                <label class="btn btn-secondary active btn-light rounded-circle" id="checkTheme">
                     <input type="checkbox" name="theme" checked autocomplete="off">
                     <i class="fas fa-lightbulb"></i>
                 </label>
@@ -65,8 +65,12 @@
                     check.addEventListener('change', function() {
                         if(this.checked) {
                             document.documentElement.setAttribute('data-theme', 'dark')
+
+                            document.getElementById("checkTheme").classList.remove('btn-light');
                         } else {
                             document.documentElement.setAttribute('data-theme', 'light')
+
+                            document.getElementById("checkTheme").classList.add('btn-light');
                         }
                     })
 
