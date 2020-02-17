@@ -3,6 +3,7 @@
 }
 
 ul li {
+    color: var(--text);
     padding-top: 5px;
 }
 
@@ -11,25 +12,30 @@ ul li {
 }
 
 .title {
+    color: var(--text);
     margin-top: 7%;
     font-weight: bold;
     font-size: 2vw;
 }
 
 .subtitle {
+    color: var(--text);
     font-size: 1vw;
 }
 
 .info {
+    color: var(--text);
     padding: 30px;
     font-size: .8vw;
 }
 
 .info li{
+    color: var(--text);
     margin-top: -20px;
 }
 
 .content p {
+    color: var(--text);
     padding-top: 2%;
     font-size: 1vw;
 }
