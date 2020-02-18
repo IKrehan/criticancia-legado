@@ -15,13 +15,13 @@
     {% for post in posts[posts_size-1::-1] %}
 
     <div class="box row">
-        <div class="box-banner col-5">
+        <div class="box-banner col-md-5 col-sm-12">
             <a href="{{ url_for('views.criticastPost', podcast_id=post.id) }}">
                 <img class="img-small img-fluid" src="{{ url_for('static', filename=post.banner) }}">
             </a>
         </div>
 
-        <div class="text-box col-6 my-auto">
+        <div class="text-box col-md-6 col-sm-12 my-auto">
             <ul>
                 <li>
                     <a href="{{ url_for('views.%s' % (post.category)) }}">
