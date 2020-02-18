@@ -5,13 +5,13 @@
 
 <div class="container rounded">
     <article class="row box-primaria">
-        <div class="col-7 banner-box-primaria">
+        <div class="col-md-7 col-sm-12 banner-box-primaria">
             <a href="{{ url_for('views.post', post_id=posts[posts_size-1].id) }}">
                 <img class="image-big img-fluid" src="{{ url_for('static', filename=posts[posts_size-1].banner) }}">
             </a>
         </div>
 
-        <div class="col-5 text-box-primaria">
+        <div class="col-md-5 col-sm-12 text-box-primaria">
             <ul>
                 <li>
                     <a href="{{ url_for('views.%s' % (posts[posts_size-1].category)) }}">
@@ -32,30 +32,30 @@
 
     <div class="row">
     {% for podcast in podcasts[:podcasts_size-3:-1] %}
-    <article class="col-6 box-secundaria">
-        <div class="box-secundaria-post1">
-            <div class="box-secundaria-post1-img">
+    <article class="col-md-6 col-sm-12">
+        <div class="box-secundaria">
+            <div class="box-secundaria-img">
                 <a href="{{ url_for('views.criticastPost', podcast_id=podcast.id) }}">
                     <img class="img-medium img-fluid" src="{{ url_for('static', filename=podcast.banner) }}">
                 </a>
             </div>
 
-            <div class="text-box-secundaria-post1">
+            <div class="text-box-secundaria">
                 <ul>
 
-                    <li class="info info-box-secundaria-post1">
+                    <li class="info info-box-secundaria">
                         <p>{{ podcast.duration }}</p>
                     </li>
 
                     <li>
                         <a href="{{ url_for('views.criticast') }}">
-                            <h2 class="category category-box-secundaria-post1">CritiCast</h2>
+                            <h2 class="category category-box-secundaria">CritiCast</h2>
                         </a>
                     </li>
 
                     <li class="title-li">
                         <a href="{{ url_for('views.criticastPost', podcast_id=podcast.id) }}">
-                            <h2 class="title title-box-secundaria-post1">{{ podcast.title }}</h2>
+                            <h2 class="title title-box-secundaria">{{ podcast.title }}</h2>
                         </a>
                     </li>
 
@@ -77,13 +77,13 @@
     {% for post in posts[posts_size-2::-1] %}
 
     <article class=" row box-news">
-        <div class="col-5 box-news-banner">
+        <div class="col-md-5 col-sm-12 box-news-banner">
             <a href="{{ url_for('views.post', post_id=post.id) }}">
                 <img class="img-small img-fluid" src="{{ url_for('static', filename=post.banner) }}">
             </a>
         </div>
 
-        <div class="col-6 text-box-news">
+        <div class="col-md-6 col-sm-12 text-box-news">
             <ul>
                 <li>
                     <a href="{{ url_for('views.%s' % (post.category)) }}">

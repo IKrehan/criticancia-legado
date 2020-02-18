@@ -59,16 +59,16 @@ box-secundaria*/
     border-radius: 20px;
 }
 
-.text-box-secundaria-post1 {
+.text-box-secundaria {
     margin-left: 5%;
 }
 
-.info-box-secundaria-post1 {
+.info-box-secundaria {
     float: right;
     padding: 10px;
 }
 
-.info-box-secundaria-post1 li {
+.info-box-secundaria li {
     display: inline-block;
     padding-left: 15%;
 }
@@ -98,4 +98,45 @@ News*/
 
 .text-box-news {
     margin-top: 3%;
+}
+
+@media screen and (max-width:700px) {
+    .category {
+        font-size: 5vw;
+    }
+
+    .header-title {
+        font-size: 3.5vw;
+    }
+
+    .title {
+        font-size: 4vw;
+    }
+
+    .desc {
+            font-size: 3vw;
+    }
+
+    .info {
+        font-size: 3vw;
+    }
+
+    .text-box {
+        margin-left: 5%;
+    }
+
+    .text-box-primaria {
+        margin-top: 0;
+        margin-left: 5%;
+        margin-bottom: 5%;
+    }
+
+    .text-box-secundaria {
+        margin-bottom: 10%;
+        margin-left: 5%;
+    }
+
+    .text-box-news {
+        margin-left: 5%;
+    }
 }

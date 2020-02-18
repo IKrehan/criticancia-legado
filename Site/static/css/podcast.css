@@ -70,9 +70,9 @@
 
 .desc-title {
     float: left;
-    font-size: 1.2vw;
     margin-left: 1.5%;
     font-size: 1.6vw;
+    color: var(--text);
 }
 
 .desc {
@@ -82,9 +82,8 @@
     margin-left: 1%;
     margin-top: .6%;
     margin-bottom: 10%;
+    color: var(--text);
 }
-
-
 
 .player {
     background: #323232;
@@ -94,4 +93,42 @@
     background-color: #323232;
     font-size: 1.7vw;
     color: white;
+}
+
+
+@media screen and (max-width:700px) {
+    .category {
+        font-size: 3.2vw;
+    }
+
+    .desc-title {
+        font-size: 3.5vw;
+    }
+
+    .title {
+        font-size: 4.3vw;
+    }
+
+    .desc {
+        font-size: 2.5vw;
+    }
+
+    .duration {
+        font-size: 2vw;
+    }
+
+    .date {
+        font-size: 2vw;
+    }
+
+    .info {
+        margin-top: -15%;
+        margin-bottom: 5%;
+    }
+
+    .btn {
+    width: 100%;
+    font-size: 2.6vw;
+    }
+
 }

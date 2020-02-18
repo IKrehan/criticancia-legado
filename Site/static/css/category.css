@@ -65,3 +65,33 @@ POST*/
 .img-small {
     border-radius: 20px;
 }
+
+/*------------------------------------------------------------------
+Media Querys*/
+
+
+@media screen and (max-width:700px) {
+    .category {
+        font-size: 5vw;
+    }
+
+    .header-title {
+        font-size: 3.5vw;
+    }
+
+    .title {
+        font-size: 4vw;
+    }
+
+    .desc {
+            font-size: 2vw;
+    }
+
+    .info {
+        font-size: 2vw;
+    }
+
+    .text-box {
+        margin-left: 5%;
+    }
+}
