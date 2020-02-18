@@ -52,25 +52,11 @@
                 </div>
 
                 <div class="btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary active">
+                <label class="btn btn-secondary active btn-light rounded-circle" id="checkTheme">
                     <input type="checkbox" name="theme" checked autocomplete="off">
                     <i class="fas fa-lightbulb"></i>
                 </label>
                 </div>
-
-                <script>
-
-                    var check = document.querySelector('input[name=theme]');
-
-                    check.addEventListener('change', function() {
-                        if(this.checked) {
-                            document.documentElement.setAttribute('data-theme', 'dark')
-                        } else {
-                            document.documentElement.setAttribute('data-theme', 'light')
-                        }
-                    })
-
-                </script>
 
             </div>
 
@@ -97,7 +83,7 @@
     
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
 
 </body>
 
