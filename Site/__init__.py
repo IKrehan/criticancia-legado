@@ -1,6 +1,6 @@
 from flask import Flask
 
-from .extensions import db, admin, login
+from .extensions import db, admin, login, migrate
 from .models import models, MyAdminIndexView, MyModelView, Posts, Adms, Podcasts
 from .views import views
 from .auth import auth
@@ -13,6 +13,7 @@ def create_app(config_file='config.py'):
 
 
     db.init_app(app)
+    migrate.init_app(app, db)
 
     admin.init_app(app, index_view=MyAdminIndexView())
     login.init_app(app)
