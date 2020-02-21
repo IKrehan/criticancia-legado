@@ -15,18 +15,18 @@ ul li {
     color: var(--text);
     margin-top: 7%;
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 3vw;
 }
 
 .subtitle {
     color: var(--text);
-    font-size: 1vw;
+    font-size: 2vw;
 }
 
 .info {
     color: var(--text);
     padding: 30px;
-    font-size: .8vw;
+    font-size: 1vw;
 }
 
 .info li{
@@ -37,5 +37,23 @@ ul li {
 .content p {
     color: var(--text);
     padding-top: 2%;
-    font-size: 1vw;
+    font-size: 1.5vw;
+}
+
+@media screen and (max-width:700px) {
+    .title {
+        font-size: 4.3vw;
+    }
+
+    .subtitle {
+    font-size: 3vw;
+    }
+
+    .info {
+    font-size: 3vw;
+    }
+
+    .content p {
+    font-size: 3vw;
+    }
 }
