@@ -21,7 +21,11 @@ body {
 
 .dropdown-menu {
     background-color: #18181b;
-    height: 530%;
+    height: 600%;
+}
+
+.drop-btns {
+    list-style: none;
 }
 
 .drop-btns li {
@@ -79,9 +83,9 @@ footer {
 }
 
 .royal {
-    text-align: right;
     color: #686868;
     font-size: .8vw;
+    text-align: right;
 }
 
 @media screen and (max-width:700px) {
