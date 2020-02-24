@@ -42,18 +42,18 @@ ul li {
 
 @media screen and (max-width:700px) {
     .title {
-        font-size: 4.3vw;
+        font-size: 5vw;
     }
 
     .subtitle {
-    font-size: 3vw;
+    font-size: 3.5vw;
     }
 
     .info {
-    font-size: 3vw;
+    font-size: 3.5vw;
     }
 
     .content p {
-    font-size: 3vw;
+    font-size: 4vw;
     }
 }

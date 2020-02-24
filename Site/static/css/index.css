@@ -126,12 +126,13 @@ News*/
     }
 
     .text-box-primaria {
-        margin-top: 0;
+        margin-top: 4%;
         margin-left: 5%;
         margin-bottom: 5%;
     }
 
     .text-box-secundaria {
+        margin-top: 4%;
         margin-bottom: 10%;
         margin-left: 5%;
     }

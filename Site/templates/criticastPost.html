@@ -28,7 +28,7 @@
         </article>
 
         <div class="row">
-            <div class="info-box col-8">
+            <div class="info-box col-md-6 d-none d-sm-none d-md-block">
 
                 <h3 class="desc-title">Neste CritiCast:</h3>
 
@@ -36,13 +36,35 @@
 
             </div>
 
-            <div class="button-box col-4">
+
+            <div class="playerbox col-md-3 d-none d-sm-none d-md-block">
+                <audio controls class="player">
+                    <source src="url_for('static', filename=podcast.audio_file)" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <div class="button-box col-md-3 col-sm-12">
                 <a href="{{ url_for('views.podcastDownload', podcast_id=podcast.id) }}">
                     <button class="btn btn-primary btn-lg">
                         <i class="fas fa-download"></i> Download
                     </button>
                 </a>
             </div>
+
+            <div class="playerbox col-md-12 d-block d-sm-block d-md-none">
+                <audio controls class="player">
+                    <source src="url_for('static', filename=podcast.audio_file)" type="audio/mpeg">
+               </audio>
+            </div>
+
+            <div class="info-box col-md-6 d-block d-sm-block d-md-none">
+
+                <h3 class="desc-title">Neste CritiCast:</h3>
+
+                <p class="desc">{{podcast.desc.capitalize()}}</p>
+
+            </div>
+
         </div>
     </div>
 
