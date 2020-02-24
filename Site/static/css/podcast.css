@@ -52,6 +52,15 @@
     text-shadow: 1px 1px 1px #000;
 }
 
+.playerbox {
+    margin-top: -.6%;
+}
+
+.player {
+    width: 100%;
+    max-width: 300px;
+}
+
 .button-box {
     margin-top: -1%;
 }
@@ -85,16 +94,6 @@
     color: var(--text);
 }
 
-.player {
-    background: #323232;
-}
-
-.btn-p {
-    background-color: #323232;
-    font-size: 1.7vw;
-    color: white;
-}
-
 
 @media screen and (max-width:700px) {
     .category {
@@ -122,13 +121,19 @@
     }
 
     .info {
-        margin-top: -15%;
+        margin-top: -20%;
         margin-bottom: 5%;
     }
 
     .btn {
-    width: 100%;
-    font-size: 2.6vw;
+        margin-top: 2%;
+        width: 100%;
+        font-size: 3.5vw;
+    }
+
+    .player {
+        margin-top: 5%;
+        margin-bottom: 5%;
     }
 
 }
