@@ -53,7 +53,8 @@
 
             <div class="playerbox col-md-12 d-block d-sm-block d-md-none">
                 <audio controls class="player">
-                    <source src="url_for('static', filename=podcast.audio_file)" type="audio/mpeg">
+                    <source src="url_for('static', filename=podcast.audio_file.mp3)" type="audio/mpeg">
+                    <source src="url_for('static', filename=podcast.audio_file.ogg)" type="audio/ogg">
                </audio>
             </div>
 
