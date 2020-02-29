@@ -29,8 +29,6 @@ class Podcasts(db.Model):
     category = 'criticast'
     audio_file = db.Column(db.String(100))
 
-
-
 class MyModelView(ModelView):
     def is_accessible(self):
         return current_user.is_authenticated

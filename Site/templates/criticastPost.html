@@ -53,8 +53,7 @@
 
             <div class="playerbox col-md-12 d-block d-sm-block d-md-none">
                 <audio controls class="player">
-                    <source src="url_for('static', filename=podcast.audio_file.mp3)" type="audio/mpeg">
-                    <source src="url_for('static', filename=podcast.audio_file.ogg)" type="audio/ogg">
+                    <source src="url_for('static', filename=podcast.audio_file)" type="audio/mpeg">
                </audio>
             </div>
 
@@ -68,7 +67,51 @@
 
         </div>
     </div>
+    
+    <div class="podcast-player player">
+        <div class="podcast-actions">
+            <button id="podcastJumpBackwardButton">
+                <i class="icon-back"></i>
+            </button>
 
+            <button id="podcastResumeAndStopButton">
+                <i class="icon-pause"></i>
+            </button>
+
+            <button id="podcastJumpForwardButton">
+                <i class="icon-forward"></i>
+            </button>
+
+            <div class="podcastname-text">
+                <span id="podcastNameText">Coca-Cola, Cheetos e Dança da Vassoura</span>
+            </div>
+        </div>
+
+        <div class="podcast-bar">
+            <div class="podcasttime-current">
+                <span id="podcastCurrentTimeText">00:00:34</span>
+            </div>
+
+            <div class="progressbar">
+                <input class="desktop" id="podcastProgressBarInput" max="2947" value="0" type="range" style="background: linear-gradient(to right, rgb(59, 180, 180) 0%, rgb(59, 180, 180) 1.15372%, rgb(116, 116, 120) 1.15372%, rgb(116, 116, 120) 100%);">
+            </div>
+
+            <div class="podcasttime-left desktop">
+                <span id="podcastTimeLeftText">00:48:32</span>
+            </div>
+
+            <i class="icon-volume-down desktop"></i>
+            <div class="podcast-volume desktop">
+                <input id="podcastVolumeInput" max="100" value="50" type="range" style="background: linear-gradient(to right, rgb(59, 180, 180) 0%, rgb(59, 180, 180) 9%, rgb(116, 116, 120) 9%, rgb(116, 116, 120) 100%);">
+            </div>
+
+            <i class="icon-volume-up desktop"></i>
+
+            <button id="podcastCloseButton">
+                <i class="icon-close"></i>
+            </button>
+        </div>
+</div>
 
 </div>
 
