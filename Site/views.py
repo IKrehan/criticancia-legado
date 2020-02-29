@@ -71,3 +71,18 @@ def post(post_id):
 @login.user_loader
 def load_user(user_id):
     return Adms.query.get(int(user_id))
+
+
+@views.route('/adm')
+def homeAdm():
+    return render_template('adminHome.html')
+
+
+@views.route('/admpost')
+def postAdm():
+    return render_template('adminPosts.html')
+
+
+@views.route('/admpodcast')
+def podcastAdm():
+    return render_template('adminPodcast.html')    

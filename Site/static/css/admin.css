@@ -1,0 +1,149 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+}
+
+.body {
+    background-color: #fafaff;
+}
+
+.side-menu {
+    height: 100%;
+    background-color: #18181b;
+}
+
+.logo-img {
+    width: 70%;
+    max-width: 195px;
+    margin-left: 25%;
+}
+
+.menu ul {
+    height: 15%;
+    display: grid;
+    padding: 30px;
+}
+
+.nav-pills .nav-link {
+    margin-bottom: 15%;
+    text-align: left;
+
+    background-color: #18181b;
+    color: white;
+}
+
+.nav-pills .nav-link:hover {
+    color: #ffed00;
+    background-color: #5b5a5a;
+}
+
+.navbar {
+    background-color: #18181b;
+    height: 7%;
+    color: white;
+}
+
+.btn {
+    color: #fff;
+    background-color: #18181b;
+    border-color: #18181b;
+}
+
+.page {
+    background-color: #fafaff;
+}
+
+/* Page ========================================================== */
+
+.info-cards {
+    display: flex;
+    margin-top: 2%;
+}
+
+.info-cards .card {
+    border-radius: 0;
+    border: 0;
+    width: 20rem;
+
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.26);
+    -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.26);
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.26);
+}
+
+.info-cards .visitantes-card {
+    background-color: #3895c0;
+}
+
+.info-cards .criticast-card {
+    background-color: #c7474d;
+}
+
+.info-cards .categoria-card {
+    background-color: #d2984c;
+}
+
+.info-cards .adsense-card {
+    background-color: #4eae70;
+}
+
+.category-upper-boxes {
+    font-family: Roboto;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.5vw;
+
+    margin-top: -7%;
+    margin-left: -5%;
+}
+
+.value-upper-boxes {
+    font-family: Roboto;
+    font-weight: bold;
+    color: #fff;
+    font-size: 3vw;
+
+    margin-top: -3%;
+
+}
+
+.title-upper-boxes {
+    font-family: Roboto;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1vw;
+
+    margin-top: -3%;
+    margin-left: 5%;
+}
+
+.graphs {
+    margin-top: 2%;
+    display: flex;
+}
+
+.graph-1-title {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 1.2vw;
+
+    margin-top: -1%;
+    margin-left: -2%;
+}
+
+.graph-2-title {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 1.2vw;
+
+    text-align: center;
+}
+
+.graphs .card {
+    border-radius: 0;
+    border: 0;
+    width: 20rem;
+
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.26);
+    -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.26);
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.26);
+}
