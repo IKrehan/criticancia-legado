@@ -1,0 +1,77 @@
+.form {
+    display: grid;
+    padding: 2rem;
+}
+
+.form label {
+    margin-bottom: -.1%;
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+.form .field {
+    margin-bottom: 1%;
+    border: none;
+    height: 2rem;
+
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.26);
+}
+
+.info-post {
+    margin-bottom: 2%;
+}
+
+.category {
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.26);
+    margin-left: 1%;
+    background-color: #fff;
+    height: 2.5rem;
+}
+
+.category label {
+    margin-top: .5rem;}
+
+select {
+    font-family: 'Roboto';
+    padding: .5rem;
+    border-color: #fff;
+}
+
+option {
+    font-family: 'Roboto';
+}
+
+
+.banner {
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.26);
+    margin-left: 5%;
+    background-color: #fff;
+    height: 2.5rem;
+}
+
+.file {
+    font-family: 'Roboto';
+    padding: .4rem;
+    border-color: #fff;
+}
+
+.content {
+    margin-bottom: 1.5%;
+    resize: none;
+    border: none;
+    height: 34rem;
+
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.26);
+}
+
+.btn {
+    width: 20%;
+    background-color: #7ddc9f;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2vw;
+    height: 3rem;
+    margin: 0 auto;
+
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.26);
+}

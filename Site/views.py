@@ -78,8 +78,8 @@ def homeAdm():
     return render_template('adminHome.html')
 
 
-@views.route('/admpost')
-def postAdm():
+@views.route('/addpost')
+def addPost():
     return render_template('adminPosts.html')
 
 
