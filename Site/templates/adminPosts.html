@@ -2,5 +2,38 @@
 {% block content %}
 
 
+<link rel="stylesheet" type="text/css" href="static/css/adminPost.css" />
+
+
+<form class="form" action="" method="get">
+
+    <label for="GET-title">Título</label>
+    <input id="GET-title" class="field" type="text" name="title" required>
+
+    <label for="GET-subtitle">Subtítulo</label>
+    <input id="GET-subtitle" class="field" type="text" name="subtitle" required>
+
+    <div class="info-post row">
+        <div class="category col-2 row">
+            <label for="GET-category" class="col-6">Categoria</label>
+            <select id="GET-category" name="category" class=" col-6">
+                <option value="0">Filmes</option>
+                <option value="1">Séries</option>
+                <option value="2">Games</option>
+            </select>
+        </div>
+
+        <div class="banner col-4">
+            <label for="GET-banner">Banner</label>
+            <input id="GET-banner" type="file" name="banner" class="file" required>
+        </div>
+    </div>
+
+    <label for="GET-content">Conteúdo</label>
+    <textarea rows="6" class="content" id="content" name="content" required></textarea>
+
+    <input type="submit" value="Postar" class="btn">
+</form>
+
 
 {% endblock content %}
