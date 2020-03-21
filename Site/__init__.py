@@ -21,17 +21,17 @@ def create_app(config_file='config.py'):
 
     admin.add_view(MyModelView(Posts, db.session))
     admin.add_view(MyModelView(Podcasts, db.session))
-    admin.add_view(MyModelView(Adms, db.session))
 
     app.register_blueprint(models)
     app.register_blueprint(views)    
     app.register_blueprint(auth)
 
     #execute db commands when the server is executed (toggle comment to use)
-    # with app.app_context():
+    with app.app_context():
         # db.create_all()
         # a = Adms(username='Criticante007', password='sha256$tmFgjPS7$7db9cba81f974237ee61837eb650b6e6f3adc844a610fff295d23fdc2ce15df5')
         # db.session.add(a)
         # db.session.commit()
+        print('Running Server')
 
     return app

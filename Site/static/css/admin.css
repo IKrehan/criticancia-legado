@@ -3,8 +3,12 @@ html, body {
     margin: 0px;
 }
 
+.dropdown {
+    margin-right: 5%;
+}
+
 .body {
-    background-color: #fafaff;
+    background-color: #18181b;
 }
 
 .side-menu {

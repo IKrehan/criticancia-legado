@@ -1,0 +1,286 @@
+{% extends 'admin/master.html' %}
+
+{% block head_css %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/admin.css') }}">
+{% endblock %}
+
+{% block head %}
+<script src="https://kit.fontawesome.com/43fb59542f.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+<link rel="icon" href="{{ url_for('static', filename='img/icons/icon.ico') }}" type="image/x-icon" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+{% endblock %}
+
+{% block head_meta %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endblock %}
+
+{% block page_body %}
+
+<body class="body">
+
+    <div class="navbar justify-content-beetwen">
+        <div class="navbar-brand logo">
+            <img class="logo-img" src="{{ url_for('static', filename='img/logo.png') }}" />
+        </div>
+
+        <div class="dropdown">
+            Irvig Krehan
+            <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Editar</a>
+                <a class="dropdown-item" href="/admlogout">Logout</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row" style="height: 90.9%;width: 100.8%;">
+        <div class="side-menu col-2">
+
+            <div class="menu">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link act" href="/admin"><i class="fas fa-home"></i> Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/posts"><i class="far fa-clipboard"></i> Posts</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/podcasts"><i class="fas fa-microphone-alt"></i> Podcasts</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"><i class="fas fa-plus"></i> Add Post</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"><i class="fas fa-plus"></i> Add Podcasts</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        {% block body %}
+        <div class="page col-10">
+            <div class="info-cards row justify-content-around">
+
+                <div class="card col-2.5 visitantes-card">
+                    <div class="card-body">
+                        <div class="category-upper-boxes">Geral</div>
+
+                        <div class="value-upper-boxes">1856</div>
+
+                        <div class="title-upper-boxes">Visitantes</div>
+                    </div>
+                </div>
+
+                <div class="card col-2.5 criticast-card">
+                    <div class="card-body">
+                        <div class="category-upper-boxes">CritiCast</div>
+
+                        <div class="value-upper-boxes">487</div>
+
+                        <div class="title-upper-boxes">Downloads/Plays</div>
+                    </div>
+                </div>
+
+                <div class="card col-2.5 categoria-card">
+                    <div class="card-body">
+                        <div class="category-upper-boxes">Posts</div>
+
+                        <div class="value-upper-boxes">Filmes</div>
+
+                        <div class="title-upper-boxes">Categoria Destaque</div>
+                    </div>
+                </div>
+
+                <div class="card col-2.5 adsense-card">
+                    <div class="card-body">
+                        <div class="category-upper-boxes">Adsense</div>
+
+                        <div class="value-upper-boxes">R$60,00</div>
+
+                        <div class="title-upper-boxes">/mês</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="graphs row justify-content-around">
+
+                <div class="card col-7">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class=" col-12" style="height: 17rem;">
+                                <canvas id="visitanteCanvas" class="line-graph-1"></canvas>
+                            </div>
+                            <script>
+                                var ctx = document.getElementById("visitanteCanvas");
+
+                                var data = {
+                                    labels: ['janeiro', 'fevereiro', 'mar', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'],
+
+                                    datasets: [{
+                                        label: 'Visitantes 2019',
+                                        data: [12.5, 12.5, 50, 25],
+                                        borderWidth: 2,
+                                        borderColor: 'rgba(255,203,22,1)',
+                                        backgroundColor: 'transparent'
+                                    }],
+                                };
+
+                                var chartGraph = new Chart(ctx, {
+                                    type: 'line',
+                                    data: data,
+                                    options: {
+                                        maintainAspectRatio: false,
+                                        responsive: true,
+                                        title: {
+                                            display: 'true',
+                                            fontSize: 20,
+                                            text: "Relatório Visitantes Anual"
+                                        }
+                                    },
+                                });
+
+
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card col-4">
+                    <div class="card-body">
+                        <div class="card-title graph-2-title">Visitantes por categoria</div>
+
+                        <div class="row">
+                            <canvas id="consumoCanvas" class="circle-graph-1 col-12"></canvas>
+
+                            <script>
+                                var ctx = document.getElementById("consumoCanvas");
+
+                                var data = {
+                                    datasets: [{
+                                        data: [12.5, 12.5, 50, 25],
+                                        backgroundColor: ['#eef66a', '#6bed64', '#5398f6', '#f65353'],
+                                    }],
+
+
+                                    // These labels appear in the legend and in the tooltips when hovering different arcs
+                                    labels: ['Games', 'Podcasts', 'Séries', 'Filmes'],
+                                };
+
+                                var chartGraph = new Chart(ctx, {
+                                    type: 'pie',
+                                    data: data,
+                                    options: {
+                                        maintainAspectRatio: false,
+                                        responsive: true,
+                                    }
+                                });
+
+
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="graphs row justify-content-around">
+
+                <div class="card col-7">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class=" col-12" style="height: 17rem;">
+                                <canvas id="adsenseCanvas" class="line-graph-1"></canvas>
+                            </div>
+                            <script>
+                                var ctx = document.getElementById("adsenseCanvas");
+
+                                var data = {
+                                    labels: ['janeiro', 'fevereiro', 'mar', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'],
+
+                                    datasets: [{
+                                        label: 'Adsense 2019',
+                                        data: [100, 2, 50, 65, 90, 100],
+                                        borderWidth: 2,
+                                        borderColor: 'rgba(255,203,22,1)',
+                                        backgroundColor: 'transparent'
+                                    }],
+                                };
+
+                                var chartGraph = new Chart(ctx, {
+                                    type: 'line',
+                                    data: data,
+                                    options: {
+                                        maintainAspectRatio: false,
+                                        responsive: true,
+                                        title: {
+                                            display: 'true',
+                                            fontSize: 20,
+                                            text: "Relatório Adsense Anual"
+                                        }
+                                    },
+                                });
+
+
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card col-4">
+                    <div class="card-body">
+                        <div class="card-title graph-2-title">Adsense por página</div>
+
+                        <div class="row">
+                            <canvas id="adsensePieCanvas" class="circle-graph-2 col-12"></canvas>
+
+                            <script>
+                                var ctx = document.getElementById("adsensePieCanvas");
+
+                                var data = {
+                                    datasets: [{
+                                        data: [12.5, 50, 25],
+                                        backgroundColor: ['#6bed64', '#5398f6', '#f65353'],
+                                    }],
+
+
+                                    // These labels appear in the legend and in the tooltips when hovering different arcs
+                                    labels: ['Homepage', 'Podcasts', 'Posts'],
+                                };
+
+                                var chartGraph = new Chart(ctx, {
+                                    type: 'pie',
+                                    data: data,
+                                    options: {
+                                        maintainAspectRatio: false,
+                                        responsive: true,
+                                    }
+                                });
+
+
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        {% endblock %}
+</body>
+
+</html>
+{% endblock %}
