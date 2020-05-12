@@ -2,8 +2,8 @@ from flask import Flask
 
 from .extensions import db, admin, login, migrate
 from .models import models, MyAdminIndexView, MyModelView, Posts, Adms, Podcasts
-from .views import views
 from .auth import auth
+from .views import views
 
 
 def create_app(config_file='config.py'):

@@ -1,6 +1,6 @@
-from flask import Blueprint, render_template, redirect, request, flash, url_for
-from werkzeug.security import check_password_hash, generate_password_hash
-from .extensions import login_user, logout_user, db
+from flask import Blueprint
+
+from .extensions import login_user, logout_user, db, render_template, redirect, request, flash, url_for, check_password_hash, generate_password_hash
 from .models import Adms
 
 auth = Blueprint('auth', __name__)

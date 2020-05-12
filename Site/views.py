@@ -1,9 +1,8 @@
+from flask import Blueprint
 import os
 
-from flask import Blueprint, render_template, send_file
-
 from .models import Posts, Adms, Podcasts
-from .extensions import login
+from .extensions import login, Blueprint, render_template, send_file
 
 views = Blueprint('views', __name__)
 

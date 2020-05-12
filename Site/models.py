@@ -1,6 +1,6 @@
-from flask import Blueprint, render_template
-from .extensions import db, UserMixin, current_user, ModelView, AdminIndexView
+from flask import Blueprint
 
+from .extensions import db, UserMixin, current_user, ModelView, AdminIndexView, Blueprint, render_template
 models = Blueprint('models', __name__)
 
 class Adms(db.Model, UserMixin):
