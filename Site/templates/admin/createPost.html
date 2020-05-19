@@ -1,25 +1,19 @@
-{% extends 'admin/master.html' %}
-
-{% block head_meta %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{% endblock %}
+    <title>Create Post - Admin</title>
 
-{% block head_css %}
-    {{ super() }}
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/admin.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/adminHome.css') }}">
-{% endblock %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/create.css') }}">
 
-{% block head %}
     <script src="https://kit.fontawesome.com/43fb59542f.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
     <link rel="icon" href="{{ url_for('static', filename='img/icons/icon.ico') }}" type="image/x-icon" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-{% endblock %}
+</head>
 
-{% block page_body %}
 <body class="body">
 
     <div class="navbar justify-content-beetwen">
@@ -58,18 +52,18 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin/posts/new"><i class="fas fa-plus"></i> Add Post</a>
+                        <a class="nav-link" href="/admin/createpost"><i class="fas fa-plus"></i> Add Post</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin/podcasts/new"><i class="fas fa-plus"></i> Add Podcasts</a>
+                        <a class="nav-link" href="/admin/createpodcast"><i class="fas fa-plus"></i> Add Podcasts</a>
                     </li>
                 </ul>
             </div>
         </div>
 
         <div class="page col-10">
-          <form action="/admin" method="POST" enctype="multipart/form-data">
+          <form action="/admin/createpost" method="POST" enctype="multipart/form-data">
             <div class="form-group">
               <label for="title">Título</label>
               <input type="text" class="form-control form-control-lg" name="title" id="title">
@@ -104,4 +98,4 @@
         </div>
     </div>
 </body>
-{% endblock %}
+</html>

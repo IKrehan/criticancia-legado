@@ -1,6 +1,6 @@
-{% extends 'admin/master.html' %}
+{% extends 'base.html' %}
 
-{% block body %}
+{% block content %}
 
 <head>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/podcast.css') }}">
@@ -65,4 +65,4 @@
 
 
 <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
-{% endblock body %}
+{% endblock content %}

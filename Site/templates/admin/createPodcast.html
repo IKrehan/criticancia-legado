@@ -1,5 +1,92 @@
-{% extends "admin.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post - Admin</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/admin.css') }}">
+
+    <script src="https://kit.fontawesome.com/43fb59542f.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="{{ url_for('static', filename='img/icons/icon.ico') }}" type="image/x-icon" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+</head>
+
+<body class="body">
+
+    <div class="navbar justify-content-beetwen">
+        <div class="navbar-brand logo">
+            <img class="logo-img" src="{{ url_for('static', filename='img/logo.png') }}" />
+        </div>
+
+        <div class="dropdown">
+            Irvig Krehan
+            <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Editar</a>
+                <a class="dropdown-item" href="/admlogout">Logout</a>
+            </div>
+        </div>
+    </div>
 
 
-{% endblock content %}
+    <div class="row" style="height: 90.9%;width: 100.8%;">
+        <div class="side-menu col-2">
+
+            <div class="menu">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link act" href="/admin"><i class="fas fa-home"></i> Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/posts"><i class="far fa-clipboard"></i> Posts</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/podcasts"><i class="fas fa-microphone-alt"></i> Podcasts</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/createpost"><i class="fas fa-plus"></i> Add Post</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/createpodcast"><i class="fas fa-plus"></i> Add Podcasts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="page col-10">
+          <form action="/admin" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="title">Título</label>
+              <input type="text" class="form-control form-control-lg" name="title" id="title">
+            </div>
+
+            <div class="form-group">
+              <label for="desc">Descrição</label>
+              <input type="text" class="form-control form-control-lg" name="desc" id="desc">
+            </div>
+
+            <div class="row">
+                <div class="form-group col-3">
+                <label for="audio">Audio</label>
+                <input type="file" class="form-control-file" name="audio" id="audio">
+                </div>
+
+                <div class="form-group col-3">
+                    <label for="banner">Banner</label>
+                    <input type="file" class="form-control-file" name="banner" id="banner">
+                </div>
+            </div>
+              <button type="submit" class="btn btn-primary btn-lg btn-success my-2">Postar</button>
+          </form> 
+        </div>
+    </div>
+</body>
+</html>
